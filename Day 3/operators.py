@@ -72,3 +72,33 @@ print("'on' in 'dragon': ", 'on' in "dragon")
 sentence="I hope this course is not full of jargon."
 print("'jargon' in sentence: ", 'jargon' in sentence)
 #finding the length of the next python and convert it into a float and then into a string 
+pyth_length=len("pyth")
+pyth_length_float=float(pyth_length)
+pyth_length_str=str(pyth_length_float)
+print("Length of 'pyth': ", pyth_length)
+#checking if number is even
+number=int(input("Enter a number: "))
+print("is the number even? ", number % 2 == 0)
+#checking if floor division of 7 by 3 is equal to in conversion of 2.7
+print("is floor division of 7 by 3 equal to int conersion of 2.7?",7//3 ==int(2.7))
+#checking if type of '10' is equal to type of 10
+print("is type of '10' is equal to type of 10?",type('10')==type(10))
+#checking if int('9.8') is equal to 10
+print("is int('9.8') is equal to 10?", int(float('9.8')) == 10)
+#writing a python script that prompts the user to enter hours and rate per hour to calculate gross pay
+hours_per_week=int(input("Enter hours:"))
+rate_per_hour=float(input("Enter rate per hour:"))
+weekly_earnings=hours_per_week*rate_per_hour
+print("Your weekly earnings is: ",weekly_earnings)
+#writing a script tht calculates the number of seconds a person have lived given the number of years they expect to live
+years=int(input("Enter number of years you expect to live: "))
+seconds_in_a_year=365*24*60*60
+total_seconds=years*seconds_in_a_year
+print("You have lived for ", total_seconds, " seconds.")
+#writing a python script that dispays the following table
+print("1\t\t1\t\t1\t\t1")
+print("2\t\t1\t\t4\t\t8")
+print("3\t\t1\t\t9\t\t27")
+print("4\t\t1\t\t16\t\t64")
+print("5\t\t1\t\t25\t\t125")
+#Finished Day 3 exercises.
