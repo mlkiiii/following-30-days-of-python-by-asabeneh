@@ -98,3 +98,7 @@ elif ("Node" and "Python" and "MongoDB") in person['skills']:
     print('He is a backend developer')
 else:
     print('unknown title')
+#If the person is married and if he lives in Finland, printing the information in the following format:
+# Asabeneh Yetayeh lives in Finland. He is married.
+if person['is_married'] and person['country']:
+    print(person["first_name"] +" "+ person["last_name"] +" "+"Lives in Finland. He is Married")
