@@ -174,7 +174,7 @@ def greet(name):
         return("Hello, Guest!")
     else:
         return("Hello, "+name+"!")
-#Creating a function called show_args to take an arbitrary number of named arguments and print their names and values.
+#Creating a function called show_args to take an arbitrary number of named arguments and print their names and values
 def show_args(**args):
     for key,value in args.items():
         print(key+":"+str(value))
