@@ -70,3 +70,19 @@ sum=reduce(lambda x,y:x+y,numbers)
 print(sum)
 cocatenate=reduce(lambda x,y:x+','+y,countries)+"are north European countries"
 print (cocatenate)
+def categorize_countries(pattern,list):
+    categorized_countries=[]
+    for i in list:
+        if pattern in i:
+            categorized_countries.append(i)
+    return categorized_countries
+def dict_countries(countries):
+    dict_countries={}
+    while len(countries)>0:
+        chr=countries[0][0]
+        dict_countries[chr]=chr
+        sum=map(lambda x:x+1 if x[0]==chr else x ,countries)
+        dict_countries[sum]=sum
+        countries=list(filter(lambda x:x[0]!=chr,countries))
+        return dict_countries
+print(dict_countries(countries))
