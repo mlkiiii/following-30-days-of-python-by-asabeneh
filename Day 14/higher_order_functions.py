@@ -2720,12 +2720,13 @@ def sort_countries_by_population(countries):
 def sort_most_spoken_languages(countries):
     languages=[]
     for country in countries:
-        if country[3] not in languages:
-            languages.append(country[3])
-        else:
-            for i in range(len(languages)):
-                if languages[i]==country[3]:
-                    languages[i][1]+=1
+        for language in country[3]:
+            if language not in languages:
+                languages.append(language)
+            else:
+                for i in range(len(languages)):
+                    if languages[i] == language:
+                        languages[i][1] += 1
     return sorted(languages,key=lambda x:x[1])[:10]
 def most_populated_countries(countries):
     return sorted(countries,key=lambda x:x[4])[:10]
