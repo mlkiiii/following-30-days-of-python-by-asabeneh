@@ -86,3 +86,26 @@ def dict_countries(countries):
         countries=list(filter(lambda x:x[0]!=chr,countries))
         return dict_countries
 print(dict_countries(countries))
+def get_first_ten(countries):
+    return countries[:10]
+def get_last_ten(countries):
+    return countries[-10:]
+#EXERCICES LEVEL 3
+def sort_countries_by_name(countries):
+    return sorted(countries)
+def sort_countries_by_capital(countries):
+    return sorted(countries,key=lambda x:x[1])
+def sort_countries_by_population(countries):
+    return sorted(countries,key=lambda x:x[2])
+def sort_most_spoken_languages(countries):
+    languages=[]
+    for country in countries:
+        if country[3] not in languages:
+            languages.append(country[3])
+        else:
+            for i in range(len(languages)):
+                if languages[i]==country[3]:
+                    languages[i][1]+=1
+    return sorted(languages,key=lambda x:x[1])[:10]
+def most_populated_countries(countries):
+    return sorted(countries,key=lambda x:x[4])[:10]
